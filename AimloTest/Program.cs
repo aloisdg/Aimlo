@@ -19,10 +19,18 @@ namespace AimloTest
 
         static void TalkWithAimlo()
         {
+            Console.BackgroundColor = ConsoleColor.DarkBlue;
+            Console.Write("<Dallo>");
+            Console.BackgroundColor = ConsoleColor.Black;
+            Console.Write(" ");
             var input = Console.ReadLine();
             if (input == "exit")
                 return;
             var output = _aimlo.getOutput(input);
+            Console.BackgroundColor = ConsoleColor.DarkRed;
+            Console.Write("<Aimlo>");
+            Console.BackgroundColor = ConsoleColor.Black;
+            Console.Write(" ");
             Console.WriteLine(output);
             TalkWithAimlo();
         }
