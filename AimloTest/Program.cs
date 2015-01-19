@@ -16,14 +16,13 @@ namespace AimloTest
             TalkWithAimlo();
         }
 
-
         static void TalkWithAimlo()
         {
             Console.Write("<Dallo> ");
             var input = Console.ReadLine();
             if (input == "exit")
                 return;
-            var output = _aimlo.getOutput(input);
+            var output = _aimlo.GetOutput(input);
             Console.Write("<Aimlo> ");
             Console.WriteLine(output);
             TalkWithAimlo();
